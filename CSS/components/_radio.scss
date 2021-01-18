@@ -1,0 +1,59 @@
+.radio {
+  display: flex;
+  cursor: pointer; //для наведения
+  user-select: none; // чтобы браузер не видел чек как текст
+
+
+  &--checkbox {
+    .radio__visible {
+      border-radius: 0;
+
+      &:before {
+        background: url(../img/order/Vector.png) center center no-repeat;
+      }
+    }
+
+    margin-bottom: 42px;
+    margin-right: 15px;
+  }
+}
+
+.radio .radio__elem {
+  display: none;
+
+  &:checked~.radio__visible {
+
+    // если радиоелем в состояние чекд, то блок висибл (его элемент бифо) будет виден
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.radio__visible {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 50%;
+  background: white;
+
+
+  &:before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #365A49;
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+}
+
+.radio__title {
+  margin-right: 37px;
+}
