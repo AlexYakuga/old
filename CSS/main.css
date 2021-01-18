@@ -324,23 +324,15 @@ img {
   font-size: 18px;
 }
 
-.reviews-section {
+.benefits-section {
   position: relative;
-  background: url(../img/reviews/strawberry.png) right top 10% no-repeat;
 }
-.reviews-section:before {
-  content: url(../img/reviews/berries.png);
+.benefits-section:before {
+  content: url(../img/benefit/leaf_benefit.png);
   position: absolute;
-  bottom: -25px;
+  bottom: 25px;
   left: 0;
-  z-index: 1;
-}
-.reviews-section:after {
-  content: url(../img/reviews/leaf_reviews.png);
-  position: absolute;
-  bottom: -80px;
-  left: 0;
-  z-index: 0;
+  z-index: 200;
 }
 
 .reviews__display {
@@ -438,6 +430,7 @@ img {
 
 .reviews-section {
   position: relative;
+  background: url(../img/reviews/strawberry.png) right top 10% no-repeat;
 }
 .reviews-section:before {
   content: url(../img/reviews/berries.png);
