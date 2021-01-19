@@ -436,15 +436,15 @@ img {
   content: url(../img/reviews/berries.png);
   position: absolute;
   bottom: -25px;
-  left: 0%;
-  z-index: 1;
+  left: 0;
+  z-index: 100;
 }
 .reviews-section:after {
   content: url(../img/reviews/leaf_reviews.png);
   position: absolute;
   bottom: -80px;
   left: 0;
-  z-index: 0;
+  z-index: 10;
 }
 
 /*&::after {
@@ -551,6 +551,7 @@ img {
   position: relative;
   border-radius: 50%;
   background: white;
+  margin-right: 10px;
 }
 .radio__visible:before {
   content: "";
