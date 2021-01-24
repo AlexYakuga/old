@@ -1,3 +1,15 @@
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+}
+
 body,
 html {
   height: 100%;
@@ -16,15 +28,15 @@ body {
 
 .wrapper {
   position: relative;
-  min-width: $containerWidth + 20px;
   min-height: 100%;
   overflow: hidden;
   width: 100%;
 }
 
 .container {
+  width: 95%;
   margin: 0 auto;
-  width: $containerWidth;
+  max-width: $containerWidth;
   // position: relative;
 }
 

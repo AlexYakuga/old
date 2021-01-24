@@ -1,9 +1,9 @@
 .btn {
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: bold;
-  padding: 21px 41px;
+  padding: rem(21px) rem(41px);
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: rem(100px);
   line-height: 1;
   text-decoration: none;
   display: inline-block;
@@ -13,7 +13,7 @@
   &--theme--white {
     background: #FFFFFF;
     color: $darkgreen;
-    margin-top: 15px;
+    margin-top: rem(15px);
 
     &:hover {
       color: #FFFFFF;
@@ -35,9 +35,9 @@
     background: transparent;
     color: black;
     text-transform: none;
-    padding: 21px 11px;
+    padding: rem(21px) rem(11px);
     font-weight: normal;
-    font-size: 18px;
+    font-size: rem(18px);
 
     &:hover {
       color: $darkgreen;

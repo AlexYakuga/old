@@ -3,6 +3,10 @@
   cursor: pointer; //для наведения
   user-select: none; // чтобы браузер не видел чек как текст
 
+  @include phones {
+    margin-bottom: (10px);
+  }
+
 
   &--checkbox {
     .radio__visible {
@@ -13,8 +17,8 @@
       }
     }
 
-    margin-bottom: 42px;
-    margin-right: 15px;
+    margin-bottom: rem(42px);
+    margin-right: rem(15px);
   }
 }
 
@@ -31,18 +35,18 @@
 }
 
 .radio__visible {
-  width: 25px;
-  height: 25px;
+  width: rem(25px);
+  height: rem(25px);
   position: relative;
   border-radius: 50%;
   background: white;
-  margin-right: 10px;
+  margin-right: rem(10px);
 
 
   &:before {
     content: "";
-    width: 13px;
-    height: 13px;
+    width: rem(13px);
+    height: rem(13px);
     background: #365A49;
     position: absolute;
     display: none;
@@ -56,5 +60,5 @@
 }
 
 .radio__title {
-  margin-right: 37px;
+  margin-right: rem(37px);
 }

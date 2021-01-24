@@ -757,8 +757,7 @@ img {
 .radio {
   display: flex;
   cursor: pointer;
-  -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 @media screen and (max-width: 480px) {
   .radio {
@@ -940,3 +939,5 @@ img {
   width: 100%;
   height: 100%;
 }
+
+/*# sourceMappingURL=main.css.map */

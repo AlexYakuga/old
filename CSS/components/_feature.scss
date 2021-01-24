@@ -4,12 +4,12 @@
 }
 
 .feature__icon {
-  width: 40px;
-  height: 37px;
-  margin-right: 10px;
+  width: rem(40px);
+  height: rem(37px);
+  margin-right: rem(10px);
 }
 
 .feature__text {
-  font-size: 16px;
-  max-width: 70px;
+  font-size: rem(16px);
+  max-width: rem(70px);
 }

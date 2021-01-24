@@ -1,13 +1,25 @@
 .benefits-section {
-  position: relative;
+position: relative;
+
+@include phones {
+  background: none;
+}
 
 
-  &:before {
-    content: url(../img/benefit/leaf_benefit.png);
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    z-index: 200;
+&:before {
+  //content: url(../img/benefit/leaf_benefit.png);
+  position: absolute;
+  bottom: rem(25px);
+  left: 0;
+  z-index: 200;
+
+  @include phones {
+    display: none;
   }
+
+  @include tablets {
+    bottom: rem(600px);
+  }
+}
 
 }

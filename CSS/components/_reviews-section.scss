@@ -2,10 +2,14 @@
   position: relative;
   background: url(../img/reviews/strawberry.png) right top 10% no-repeat;
 
+  @include tablets {
+    background: url(../img/reviews/strawberry.png) right top no-repeat;
+  }
+
   &:before {
     content: url(../img/reviews/berries.png);
     position: absolute;
-    bottom: -25px;
+    bottom: rem(-25px);
     left: 0;
     z-index: 100;
   }
@@ -13,7 +17,7 @@
   &:after {
     content: url(../img/reviews/leaf_reviews.png);
     position: absolute;
-    bottom: -80px;
+    bottom: rem(-80px);
     left: 0;
     z-index: 10;
   }
