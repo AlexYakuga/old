@@ -450,6 +450,7 @@ img {
 
 .benefits-section {
   position: relative;
+  background: url(../img/benefit/raws.png) left bottom 1% no-repeat;
 }
 @media screen and (max-width: 480px) {
   .benefits-section {
@@ -457,8 +458,9 @@ img {
   }
 }
 .benefits-section:before {
+  content: url(../img/benefit/leaf_benefit.png);
   position: absolute;
-  bottom: 1.3888888889rem;
+  bottom: 18.0555555556rem;
   left: 0;
   z-index: 200;
 }
@@ -872,66 +874,66 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.8333333333rem 0;
+}
+@media screen and (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacts {
+    margin-bottom: 0.5555555556rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .socials {
   display: flex;
   align-items: center;
-  margin-right: 50px;
+  height: 1.3888888889rem;
+}
+.socials__item {
+  align-items: center;
+  margin-right: 0.8333333333rem;
+}
+.socials__item:last-child {
+  margin-right: 0;
 }
 
-.socials__link {
-  display: block;
-  position: relative;
+.contacts__place {
+  font-size: 21px;
+}
+
+.contacts-phone {
+  display: flex;
+  align-items: center;
+}
+.contacts-phone--img {
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
+  color: #497870;
+  margin-right: 0.3888888889rem;
+}
+
+.phone-number {
+  font-size: 21px;
+  color: #497870;
 }
 
 .socials__item {
   position: relative;
   display: inline-block;
+  width: 20px;
+  height: 12px;
 }
-.socials__item--icon-vk::after {
-  content: "";
-  background: url(../img/footer/css_sprites.png) -50px -50px;
-  width: 1.1111111111rem;
-  height: 1.1111111111rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  position: absolute;
-}
-.socials__item--icon-fb::after {
-  content: "";
-  background: url(../img/footer/css_sprites.png) -10px -10px;
-  width: 1.1111111111rem;
-  height: 1.1111111111rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  position: absolute;
-}
-.socials__item--icon-fb::after {
-  content: "";
-  background: url(../img/footer/css_sprites.png) -50px -10px;
-  width: 1.1111111111rem;
-  height: 1.1111111111rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  position: absolute;
-}
-.socials__item--icon-fb::after {
-  content: "";
-  background: url(../img/footer/css_sprites.png) -50px -10px;
-  width: 1.1111111111rem;
-  height: 1.1111111111rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  position: absolute;
+
+.social-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .section-map__img {

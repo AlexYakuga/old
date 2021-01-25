@@ -2,77 +2,80 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: rem(15px) 0;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.contacts {
+  @include phones {
+    margin-bottom: rem(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .socials {
   display: flex;
+
   align-items: center;
-  margin-right: 50px;
+  height: rem(25px);
 
+  &__item {
+    align-items: center;
+    margin-right: rem(15px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
-.socials__link {
-  display: block;
-  position: relative;
-  // vertical-align: middle;
+.contacts__place {
+  font-size: 21px;
 }
 
+.contacts-phone {
+  display: flex;
+  align-items: center;
+
+  &--img {
+    width: rem(12px);
+    height: rem(12px);
+    color: #497870;
+    margin-right: rem(7px);
+  }
+}
+
+.phone-number {
+  font-size: 21px;
+  color: #497870;
+}
+
+// .socials__link {
+//   display: block;
+//   position: relative;
+//   // vertical-align: middle;
+// }
+
+// .social-icon {
+//   fill: red;
+// }
 
 .socials__item {
   position: relative;
   display: inline-block;
-
-  &--icon-vk::after {
-    content: "";
-    background: url(../img/footer/css_sprites.png) -50px -50px;
-    width: rem(20px);
-    height: rem(20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    position: absolute;
-
-  }
-
-  &--icon-fb::after {
-    content: "";
-    background: url(../img/footer/css_sprites.png) -10px -10px;
-    width: rem(20px);
-    height: rem(20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    position: absolute;
-  }
-
-  &--icon-fb::after {
-    content: "";
-    background: url(../img/footer/css_sprites.png) -50px -10px;
-    width: rem(20px);
-    height: rem(20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    position: absolute;
-  }
-
-  &--icon-fb::after {
-    content: "";
-    background: url(../img/footer/css_sprites.png) -50px -10px;
-    width: rem(20px);
-    height: rem(20px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    position: absolute;
-  }
-
+  width: 20px;
+  height: 12px;
 }
 
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
 
 .section-map__img {
   object-fit: cover;

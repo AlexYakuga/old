@@ -85,9 +85,9 @@
   flex-wrap: wrap;
   margin-top: rem(27px);
 
-@include phones {
-  justify-content: center;
-}
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .form__btns {
