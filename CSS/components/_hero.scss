@@ -6,6 +6,10 @@
   color: #FFFFFF;
   position: relative;
 
+  @include phones {
+    background-size: 80% 80%; //масштаб
+  }
+
   @include tablets {
     background-position: right bottom 88%; //поднять 
   }

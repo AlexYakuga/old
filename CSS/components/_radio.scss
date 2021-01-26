@@ -2,6 +2,7 @@
   display: flex;
   cursor: pointer; //для наведения
   user-select: none; // чтобы браузер не видел чек как текст
+  //align-items: center;
 
   @include phones {
     margin-bottom: (10px);

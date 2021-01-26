@@ -92,6 +92,11 @@ img {
   color: #FFFFFF;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .hero {
+    background-size: 80% 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero {
     background-position: right bottom 88%;
@@ -870,14 +875,27 @@ img {
   border-radius: 10px;
 }
 
-.footer-container {
+.map-section {
+  position: relative;
+}
+
+.footer {
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.8333333333rem 0;
+  height: 4.7777777778rem;
 }
 @media screen and (max-width: 480px) {
-  .footer-container {
+  .footer__container {
     flex-direction: column;
   }
 }
