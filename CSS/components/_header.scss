@@ -56,8 +56,13 @@
   margin-right: rem(6px);
 }
 
+// .contacts-phone--img__white {
+//   fill: #ffffff;
+// }
+
 .phone-number__text {
   white-space: nowrap; ///// элементы не будут переноситься
+  color: #FFFFFF;
 }
 
 .phone-number__icon {

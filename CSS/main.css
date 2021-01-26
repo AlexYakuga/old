@@ -244,6 +244,7 @@ img {
 
 .phone-number__text {
   white-space: nowrap;
+  color: #FFFFFF;
 }
 
 .phone-number__icon {
@@ -767,10 +768,16 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
           user-select: none;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 480px) {
+  .radio-pay-card {
+    margin-left: -1rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .radio {
-    margin-bottom: 10px;
+    margin-bottom: 0.5555555556rem;
   }
 }
 .radio--checkbox {
@@ -782,6 +789,11 @@ img {
 }
 .radio--checkbox .radio__visible:before {
   background: url(../img/order/Vector.png) center center no-repeat;
+}
+@media screen and (max-width: 480px) {
+  .radio--checkbox {
+    margin-right: 0;
+  }
 }
 
 .radio .radio__elem {
@@ -876,13 +888,21 @@ img {
   border-radius: 10px;
 }
 
-.map-section {
-  background: url(../img/footer/map.png) no-repeat;
-  background-size: 100%;
+.section-map__img {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
   height: 100vh;
+  background: #ffffff;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 4.7777777778rem;
 }
 
 .footer__container {
@@ -891,10 +911,6 @@ img {
   justify-content: space-between;
   padding: 0.8333333333rem 0;
   height: 4.7777777778rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
 }
 @media screen and (max-width: 480px) {
   .footer__container {
@@ -924,6 +940,26 @@ img {
   margin-right: 0;
 }
 
+.socials__item {
+  position: relative;
+  vertical-align: middle;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+.social-icon--vk {
+  height: 0.7777777778rem;
+}
+
+.social-icon--fb {
+  fill: gray;
+}
+.social-icon--fb:hover {
+  fill: black;
+}
+
 .contacts__place {
   font-size: 21px;
 }
@@ -932,25 +968,20 @@ img {
   display: flex;
   align-items: center;
 }
-.contacts-phone--img {
+.contacts-phone--img__dark {
   width: 0.6666666667rem;
   height: 0.6666666667rem;
+  fill: #3f3e3c;
+  margin-right: 0.3888888889rem;
+}
+.contacts-phone--img__white {
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
+  fill: #f5f3ef;
   margin-right: 0.3888888889rem;
 }
 
 .phone-number {
   font-size: 21px;
   color: #497870;
-}
-
-.socials__item {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 12px;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
 }

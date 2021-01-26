@@ -1,10 +1,28 @@
-.map-section {
-  background: url(../img/footer/map.png) no-repeat;
-  background-size: 100%;
+// .map-section {
+//   background: url(../img/footer/map.png) no-repeat;
+//   background-size: 100%;
+// }
+
+// .section-map {
+//   position: relative;
+// }
+
+.section-map__img {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
   height: 100vh;
+  background: #ffffff;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: rem(86px);
+
 }
 
 
@@ -14,10 +32,7 @@
   justify-content: space-between;
   padding: rem(15px) 0;
   height: rem(86px);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
+
 
 
   @include phones {
@@ -36,7 +51,6 @@
 
 .socials {
   display: flex;
-
   align-items: center;
   height: rem(25px);
 
@@ -50,6 +64,32 @@
   }
 }
 
+.socials__item {
+  position: relative;
+  // display: flex;
+  // width: 20px;
+  // height: 12px;
+  vertical-align: middle;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+
+  &--vk {
+    height: rem(14px);
+  }
+
+}
+
+.social-icon--fb {
+  fill: gray;
+
+  &:hover {
+    fill: black;
+  }
+}
+
 .contacts__place {
   font-size: 21px;
 }
@@ -58,44 +98,23 @@
   display: flex;
   align-items: center;
 
-  &--img {
+  &--img__dark {
     width: rem(12px);
     height: rem(12px);
-    // color: #497870;
+    fill: #3f3e3c;
     margin-right: rem(7px);
   }
+
+  &--img__white {
+    width: rem(12px);
+    height: rem(12px);
+    fill: #f5f3ef;
+    margin-right: rem(7px);
+  }
+
 }
 
 .phone-number {
   font-size: 21px;
   color: #497870;
 }
-
-// .socials__link {
-//   display: block;
-//   position: relative;
-//   // vertical-align: middle;
-// }
-
-// .social-icon {
-//   fill: red;
-// }
-
-.socials__item {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 12px;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-
-// .section-map__img {
-//   object-fit: cover;
-//   overflow: hidden;
-//   width: 100%;
-//   height: 100%;
-// }
