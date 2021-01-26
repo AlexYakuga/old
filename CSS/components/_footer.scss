@@ -1,14 +1,10 @@
 .map-section {
-  position: relative;
+  // position: relative;
+  // flex: 1;
 }
 
 .footer {
   height: 100vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
 }
 
 .footer__container {
@@ -17,6 +13,10 @@
   justify-content: space-between;
   padding: rem(15px) 0;
   height: rem(86px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 
 
   @include phones {
@@ -60,7 +60,7 @@
   &--img {
     width: rem(12px);
     height: rem(12px);
-    color: #497870;
+    // color: #497870;
     margin-right: rem(7px);
   }
 }

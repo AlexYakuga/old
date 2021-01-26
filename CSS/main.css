@@ -324,6 +324,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .section--font-color--green {
   color: #0b4d3c;
@@ -875,16 +876,8 @@ img {
   border-radius: 10px;
 }
 
-.map-section {
-  position: relative;
-}
-
 .footer {
   height: 100vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .footer__container {
@@ -893,6 +886,10 @@ img {
   justify-content: space-between;
   padding: 0.8333333333rem 0;
   height: 4.7777777778rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 @media screen and (max-width: 480px) {
   .footer__container {
@@ -933,7 +930,6 @@ img {
 .contacts-phone--img {
   width: 0.6666666667rem;
   height: 0.6666666667rem;
-  color: #497870;
   margin-right: 0.3888888889rem;
 }
 
