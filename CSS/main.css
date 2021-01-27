@@ -904,6 +904,11 @@ img {
   position: absolute;
   height: 4.7777777778rem;
 }
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 7.2222222222rem;
+  }
+}
 
 .footer__container {
   display: flex;
@@ -949,14 +954,33 @@ img {
   width: 20px;
   height: 20px;
 }
+
 .social-icon--vk {
   height: 0.7777777778rem;
+  fill: gray;
+}
+.social-icon--vk:hover {
+  fill: black;
 }
 
 .social-icon--fb {
   fill: gray;
 }
 .social-icon--fb:hover {
+  fill: black;
+}
+
+.social-icon--inst {
+  fill: gray;
+}
+.social-icon--inst:hover {
+  fill: black;
+}
+
+.social-icon--tw {
+  fill: gray;
+}
+.social-icon--tw:hover {
   fill: black;
 }
 

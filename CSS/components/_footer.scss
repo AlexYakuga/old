@@ -23,6 +23,9 @@
   position: absolute;
   height: rem(86px);
 
+  @include phones {
+    height: rem(130px);
+  }
 }
 
 
@@ -66,9 +69,6 @@
 
 .socials__item {
   position: relative;
-  // display: flex;
-  // width: 20px;
-  // height: 12px;
   vertical-align: middle;
 }
 
@@ -76,11 +76,21 @@
   width: 20px;
   height: 20px;
 
-  &--vk {
-    height: rem(14px);
-  }
+  // &--vk {
+  //   height: rem(14px);
+  // }
 
 }
+
+.social-icon--vk {
+  height: rem(14px);
+  fill: gray;
+
+  &:hover {
+    fill: black;
+  }
+}
+
 
 .social-icon--fb {
   fill: gray;
@@ -89,6 +99,27 @@
     fill: black;
   }
 }
+
+.social-icon--inst {
+  fill: gray;
+
+  &:hover {
+    fill: black;
+  }
+}
+
+.social-icon--tw {
+  fill: gray;
+
+  &:hover {
+    fill: black;
+  }
+}
+
+
+
+
+
 
 .contacts__place {
   font-size: 21px;
