@@ -796,6 +796,7 @@ img {
 @media screen and (max-width: 480px) {
   .radio {
     margin-bottom: 0.5555555556rem;
+    font-size: 1rem;
   }
 }
 .radio--checkbox {
@@ -844,6 +845,11 @@ img {
 
 .radio__title {
   margin-right: 2.0555555556rem;
+}
+@media screen and (max-width: 480px) {
+  .radio__title {
+    margin-right: 28px;
+  }
 }
 
 .fixed-menu {
