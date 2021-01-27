@@ -5,6 +5,10 @@
   overflow: hidden;
   position: relative;
 
+  @include phones {
+    padding-right: rem(25px);
+  }
+
 
 
   &:before {
@@ -73,11 +77,17 @@
 .reviews__text {
   margin-bottom: rem(32px);
   color: #666666;
-  width: rem(463px);
+  max-width: rem(463px);
 
   @include tablets {
-    width: rem(723px);
+    max-width: rem(723px);
   }
+
+  @include phones {
+    font-size: rem(18px);
+  }
+
+
 }
 
 .reviews__author {

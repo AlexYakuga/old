@@ -6,7 +6,9 @@
     background: url(../img/reviews/strawberry.png) right top no-repeat;
   }
 
-
+  @include phones {
+    background: url(../img/reviews/strawberry.png) right top -15px no-repeat;
+  }
 
   &:before {
     content: url(../img/reviews/berries.png);
@@ -16,9 +18,6 @@
     z-index: 100;
 
     @include phones {
-      // width: 40%;
-      // height: 40%;
-
       left: -55px;
     }
 
@@ -37,12 +36,4 @@
       // height: 15%;
     }
   }
-
 }
-
-/*&::after {
-    content: url("../img/decor/reviews/strawberries.png");
-    position: absolute;
-    top: 6.4%;
-    right:1.9%;
-}*/

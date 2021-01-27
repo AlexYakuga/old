@@ -497,6 +497,11 @@ img {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .reviews__display {
+    padding-right: 1.3888888889rem;
+  }
+}
 .reviews__display:before {
   content: "";
   display: block;
@@ -564,11 +569,16 @@ img {
 .reviews__text {
   margin-bottom: 1.7777777778rem;
   color: #666666;
-  width: 25.7222222222rem;
+  max-width: 25.7222222222rem;
 }
 @media screen and (max-width: 768px) {
   .reviews__text {
-    width: 40.1666666667rem;
+    max-width: 40.1666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    font-size: 1rem;
   }
 }
 
@@ -615,6 +625,11 @@ img {
     background: url(../img/reviews/strawberry.png) right top no-repeat;
   }
 }
+@media screen and (max-width: 480px) {
+  .reviews-section {
+    background: url(../img/reviews/strawberry.png) right top -15px no-repeat;
+  }
+}
 .reviews-section:before {
   content: url(../img/reviews/berries.png);
   position: absolute;
@@ -640,12 +655,6 @@ img {
   }
 }
 
-/*&::after {
-    content: url("../img/decor/reviews/strawberries.png");
-    position: absolute;
-    top: 6.4%;
-    right:1.9%;
-}*/
 .order-section {
   position: relative;
   background: url(../img/order/back.png);
