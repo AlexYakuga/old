@@ -6,12 +6,22 @@
     background: url(../img/reviews/strawberry.png) right top no-repeat;
   }
 
+
+
   &:before {
     content: url(../img/reviews/berries.png);
     position: absolute;
     bottom: rem(-25px);
     left: 0;
     z-index: 100;
+
+    @include phones {
+      // width: 40%;
+      // height: 40%;
+
+      left: -55px;
+    }
+
   }
 
   &:after {
@@ -20,6 +30,12 @@
     bottom: rem(-80px);
     left: 0;
     z-index: 10;
+
+    @include phones {
+      left: -40px;
+      // width: 15%;
+      // height: 15%;
+    }
   }
 
 }

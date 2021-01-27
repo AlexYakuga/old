@@ -183,7 +183,9 @@ img {
 }
 @media screen and (max-width: 480px) {
   .hero__tittle-desc {
-    padding: 0 15%;
+    padding: 0 7%;
+    margin-bottom: 0.1111111111rem;
+    margin-bottom: 0.1111111111rem;
   }
 }
 
@@ -340,6 +342,12 @@ img {
   margin-bottom: 2.9444444444rem;
   text-align: center;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    margin-bottom: 0.1111111111rem;
+    font-size: 2rem;
+  }
 }
 .section__title-reviews {
   margin-bottom: 0.3888888889rem;
@@ -614,12 +622,22 @@ img {
   left: 0;
   z-index: 100;
 }
+@media screen and (max-width: 480px) {
+  .reviews-section:before {
+    left: -55px;
+  }
+}
 .reviews-section:after {
   content: url(../img/reviews/leaf_reviews.png);
   position: absolute;
   bottom: -4.4444444444rem;
   left: 0;
   z-index: 10;
+}
+@media screen and (max-width: 480px) {
+  .reviews-section:after {
+    left: -40px;
+  }
 }
 
 /*&::after {
