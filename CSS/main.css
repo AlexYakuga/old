@@ -595,6 +595,7 @@ img {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 .interactive-avatar--active {
   border-color: #365A49;
@@ -1041,4 +1042,31 @@ img {
 .phone-number {
   font-size: 21px;
   color: #497870;
+}
+
+.fulscreen-menu {
+  height: 100%;
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.menu--vertical {
+  font-size: 36px;
+  color: #FFFFFF;
+  max-width: 293px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .menu--vertical {
+    display: block;
+  }
 }

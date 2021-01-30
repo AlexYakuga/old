@@ -26,7 +26,9 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap; // перевод в две строки
-  justify-content: center;
+  justify-content: center; //gh
+
+  
 }
 
 .menu__link {
@@ -55,10 +57,6 @@
   width: rem(14px);
   margin-right: rem(6px);
 }
-
-// .contacts-phone--img__white {
-//   fill: #ffffff;
-// }
 
 .phone-number__text {
   white-space: nowrap; ///// элементы не будут переноситься
