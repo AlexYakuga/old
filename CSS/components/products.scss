@@ -30,12 +30,29 @@
 .product-slider__arrow--direction--prev {
   position: absolute;
   top: 50%;
+
+  @include tablets {
+    top: 27%;
+  }
+
+  @include phones {
+    top: 22%;
+  }
 }
 
 .product-slider__arrow--direction--next {
   position: absolute;
   top: 50%;
   right: 1%;
+
+  @include tablets {
+    top: 27%;
+  }
+
+  @include phones {
+    top: 22%;
+  }
+
 }
 
 
@@ -52,6 +69,8 @@
 
 .products__ingridients-icon {
   display: inline-block;
+  width: 46px;
+  height: 46px;
 }
 
 .products__title {
@@ -97,9 +116,6 @@
   justify-content: space-between;
   padding-left: rem(20px);
   padding-right: rem(20px);
-  // min-width: 470px;
-  // min-height: 545px;
-  // background: url(../img/psoducts/choclate.png) right center / 100% auto no-repeat;
 
   @include tablets {
     align-items: center;
@@ -136,6 +152,7 @@
   color: #000000;
   font-weight: bold;
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .products__desc-value {

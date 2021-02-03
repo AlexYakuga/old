@@ -7,15 +7,15 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 0;
+  // left: 0;
   right: 0;
   bottom: 0;
   left: 100%;
   z-index: 150;
-  transition: .5;
+  // transition: .5;
 }
 
-.menu--active {
+.fulscreen-menu--active {
   left: 0;
   // position: relative;
 }

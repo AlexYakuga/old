@@ -34,6 +34,7 @@
 .dropdoown__item-elem {
   margin-right: 14px;
   width: 32px;
+  display: flex;
 }
 
 .dropdown__item {
@@ -44,11 +45,14 @@
   margin-bottom: 23px;
 }
 
+.dropdown__item-logo {
+  width: 32px;
+  height: 27px;
+}
+
 .dropdown__item-text {
   color: #000000;
   font-size: 16px;
   min-width: 127px;
   margin-right: 25px;
-
-
 }
