@@ -1297,6 +1297,10 @@ img {
   margin-bottom: 23px;
 }
 
+.dropdown__item:last-child {
+  margin-bottom: 0;
+}
+
 .dropdown__item-logo {
   width: 32px;
   height: 27px;
