@@ -28,7 +28,7 @@
   flex-wrap: wrap; // перевод в две строки
   justify-content: center; //gh
 
-  
+
 }
 
 .menu__link {
@@ -42,6 +42,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &--vertical {
+    margin-bottom: 10px;
   }
 }
 

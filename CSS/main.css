@@ -230,6 +230,9 @@ img {
 .menu__item:last-child {
   margin-right: 0;
 }
+.menu__item--vertical {
+  margin-bottom: 10px;
+}
 
 .phone-number {
   font-size: 1.2222222222rem;
@@ -1090,14 +1093,14 @@ img {
   height: 100vh;
 }
 
-.products__container {
+.products-section__container {
   position: relative;
 }
 
 .product__container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   height: 100%;
   padding: 1.3333333333rem 0.4444444444rem 2.7777777778rem;
 }
@@ -1220,28 +1223,25 @@ img {
   }
 }
 
-.products__desc--col {
+.products__desc-col {
   display: flex;
   max-height: 60px;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.products__desc--text {
+.products__desc-text {
   margin-right: 45px;
+  font-size: 18px;
+  color: #666666;
 }
 @media screen and (max-width: 768px) {
-  .products__desc--text {
+  .products__desc-text {
     padding-left: 25px;
   }
 }
 
-.products__desc-title {
-  font-size: 18px;
-  color: #666666;
-}
-
-.products__desc-title__elem {
+.products__desc-elem {
   color: #000000;
   font-weight: bold;
   font-size: 18px;
