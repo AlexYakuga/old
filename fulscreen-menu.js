@@ -1,5 +1,3 @@
-//модалка и валидация
-
 const validateFields = (form, fieldsArray) => {  // создадим функцию, в которую передадим форму  список полей для валдиации
 
   fieldsArray.forEach((field) => {      //если значение инпута будет пусты
@@ -23,6 +21,9 @@ $('.form').submit((e) => {                      //на форму навесим
   const comment = form.find("[name='comment']");
   const to = form.find("[name='to']");     // куда уйдет сообщение (делаем скрытый инпут в html)
 
+  const modal = $('#modal');
+  const content = modal.find('.modal__content');
+
   const isValid = validateFields(form, [name, phone, comment, to]);
 
   if (isValid) {                   //если кол-во таких запросов = 0, то производим от-ку зап-са
@@ -35,19 +36,23 @@ $('.form').submit((e) => {                      //на форму навесим
         comment: comment.val(),
         to: to.val(),
       },                               //данные которые передаем с запросом
+      success: (data) => {
+        content.text(data.message)
+        // console.log(data);
+        $.fancybox.open({                            //обращаемся в фэнсибокс
+          src: '#modal',                             //куда передаем
+          type: 'inline',                            //передаем настройки,тип
+        });
+      },
     });
   }
-
-  // $.fancybox.open({                            //обращаемся в фэнсибокс
-  //   src: '#modal',                             //куда передаем
-  //   type: 'inline'                             //передаем настройки,тип
-  // })
 });
 
 $('.app-submit-btn').click((e) => {              //закрываем после отправки формы
-  e.preventDefault
+  e.preventDefault();
+
   $.fancybox.close();
-})
+});
 
 
 
