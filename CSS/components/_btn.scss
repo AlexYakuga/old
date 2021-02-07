@@ -10,6 +10,8 @@
   border: none;
   cursor: pointer;
 
+
+
   &--theme--white {
     background: #FFFFFF;
     color: $darkgreen;
@@ -24,6 +26,7 @@
   &--theme--green {
     background: $darkgreen;
     color: white;
+    outline: none;
 
     &:hover {
       color: $darkgreen;

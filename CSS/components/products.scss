@@ -148,6 +148,10 @@
   max-height: 60px;
   align-items: center;
   margin-bottom: 30px;
+
+  @include phones {
+    margin-left: 15px;
+  }
 }
 
 .products__desc-text {

@@ -1,16 +1,4 @@
-const validateFields = (form, fieldsArray) => {  // создадим функцию, в которую передадим форму  список полей для валдиации
-
-  fieldsArray.forEach((field) => {      //если значение инпута будет пусты
-    field.removeClass('input-error');           // перед тем как проверить, удалим класс, чтобы не было бордера после отправки
-    if (field.val().trim() == "") {             //trim обрезает пробелы
-      field.addClass('input-error');            // то добавим класс, который будет выдавать ошибку
-    }
-  });
-
-  const errorFields = form.find('.input-error');          //проверим, что в форме ошибок при отправке нет
-
-  return errorFields.lenght == 0;
-}
+//модалка и валидация
 
 $('.form').submit((e) => {                      //на форму навесим событие submit
   e.preventDefault();
@@ -26,9 +14,16 @@ $('.form').submit((e) => {                      //на форму навесим
 
   modal.removeClass('error-modal');
 
-  const isValid = validateFields(form, [name, phone, comment, to]);
+  [name, phone, comment, to].forEach(field => {      //если значение инпута будет пустым
+    field.removeClass('input-error');             // перед тем как проверить, удалим класс, чтобы не было бордера после отправки
+    if (field.val().trim() == "") {               //trim обрезает пробелы
+      field.addClass('input-error');              // то добавим класс, который будет выдавать ошибку
+    }
+  });
 
-  if (isValid) {                   //если кол-во таких запросов = 0, то производим от-ку зап-са
+  const errorFields = form.find('.input-error');    //проверим, что в форме ошибок при отправке нет
+
+  if (errorFields.length == 0) {                   //если кол-во таких запросов = 0, то производим отп-ку зап-са
     $.ajax({
       url: 'https://webdev-api.loftschool.com/sendmail', //куда отправляем запрос
       method: 'post',
@@ -38,6 +33,7 @@ $('.form').submit((e) => {                      //на форму навесим
         comment: comment.val(),
         to: to.val(),
       },                               //данные которые передаем с запросом
+
       success: data => {
         content.text(data.message)
         // console.log(data);
@@ -48,7 +44,7 @@ $('.form').submit((e) => {                      //на форму навесим
       },
       error: data => {
         const message = data.responseJSON.message;
-        content.text(message);
+        content.text(message)
         modal.addClass('error-modal');
 
         $.fancybox.open({                            //обращаемся в фэнсибокс
@@ -62,9 +58,8 @@ $('.form').submit((e) => {                      //на форму навесим
 
 $('.app-submit-btn').click((e) => {              //закрываем после отправки формы
   e.preventDefault();
-
   $.fancybox.close();
-});
+})
 
 
 

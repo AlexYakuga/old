@@ -102,6 +102,7 @@
   font-weight: bold;
   font-size: 21px;
   margin-bottom: 8px;
+  outline: none;
 
   &::after {
     content: url(../img/team/str.png);
@@ -119,9 +120,6 @@
   }
 
 }
-
-
-
 
 .team__content {
   overflow: hidden;

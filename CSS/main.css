@@ -307,6 +307,7 @@ img {
 .btn--theme--green {
   background: #0b4d3c;
   color: white;
+  outline: none;
 }
 .btn--theme--green:hover {
   color: #0b4d3c;
@@ -349,7 +350,7 @@ img {
 @media screen and (max-width: 480px) {
   .section__title {
     margin-bottom: 0.1111111111rem;
-    font-size: 2rem;
+    font-size: 2.4444444444rem;
   }
 }
 .section__title-reviews {
@@ -1282,6 +1283,11 @@ img {
   align-items: center;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 480px) {
+  .products__desc-col {
+    margin-left: 15px;
+  }
+}
 
 .products__desc-text {
   margin-right: 45px;
@@ -1472,6 +1478,7 @@ img {
   font-weight: bold;
   font-size: 21px;
   margin-bottom: 8px;
+  outline: none;
 }
 .team__title::after {
   content: url(../img/team/str.png);
