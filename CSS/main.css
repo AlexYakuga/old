@@ -1447,6 +1447,9 @@ img {
   border: none;
   position: relative;
   white-space: nowrap;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
 }
 .team__title::after {
   content: url(../img/team/str.png);
@@ -1457,10 +1460,8 @@ img {
   height: 26px;
 }
 
-.team__title {
-  font-weight: bold;
-  font-size: 21px;
-  margin-bottom: 8px;
+.team__item.active .team__title::after {
+  transform: rotate(180deg);
 }
 
 .team__content {
