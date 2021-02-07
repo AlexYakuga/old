@@ -27,8 +27,16 @@
     font-size: rem(36px);
   }
 
-
   &-reviews {
     margin-bottom: rem(7px);
   }
+}
+
+.section__title-mobile {
+  font-weight: bold;
+  font-size: rem(48px);
+  margin-bottom: rem(53px);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }

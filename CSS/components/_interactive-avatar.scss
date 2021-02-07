@@ -6,18 +6,10 @@
   overflow: hidden;
   position: relative;
   margin: 0;
+}
 
-  &--active {
-    border-color: #365A49;
-
-    // @include tablets {
-    //   box-sizing: content-box;
-    // }
-
-    // @include phones {
-    //   box-sizing: content-box;
-    // }
-  }
+.active {
+  border-color: #365A49;
 }
 
 .interactive-avatar__link {
