@@ -825,6 +825,14 @@ img {
   }
 }
 
+.form__input .input-error {
+  border-color: hotpink;
+}
+
+.input-error {
+  border-color: hotpink;
+}
+
 .radio {
   display: flex;
   cursor: pointer;
@@ -1152,7 +1160,7 @@ img {
 
 .product-slider__arrow--direction--prev {
   position: absolute;
-  top: 50%;
+  top: 45%;
 }
 @media screen and (max-width: 768px) {
   .product-slider__arrow--direction--prev {
@@ -1165,9 +1173,23 @@ img {
   }
 }
 
+.product-slider {
+  position: relative;
+}
+
+.bx-wrapper {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.product-slider__arrow {
+  z-index: 1000;
+}
+
 .product-slider__arrow--direction--next {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 1%;
 }
 @media screen and (max-width: 768px) {
@@ -1488,4 +1510,30 @@ img {
   .team--version--mobile {
     display: flex;
   }
+}
+
+.modal {
+  display: none;
+}
+.modal.error-modal .modal__content {
+  color: red;
+}
+.modal.fancybox-content {
+  padding: 0 !important;
+}
+.modal .fancybox-button {
+  display: none;
+}
+
+.modal__container {
+  background: #fff;
+  padding: 35px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__content {
+  margin-bottom: 15px;
+  columns: #000;
 }

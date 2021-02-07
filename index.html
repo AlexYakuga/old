@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="stylesheet" href="./CSS/main.css">
   <title>CHOCCO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 
 <body>
@@ -250,6 +252,104 @@
                 </div>
               </div>
             </li>
+            <li class="products__item product">
+              <div class="product__container">
+                <div class="product__col-img">
+                  <img src="./img/psoducts/choclate2.png" alt="">
+                </div>
+                <div class="product__col">
+
+                  <div class="dropdown">
+                    <div class="products__ingridients">
+                      <div class="products__ingridients-img">
+                        <svg class="products__ingridients-icon">
+                          <use xlink:href="./img/SPRITE.svg#choco"></use>
+                        </svg>
+                      </div>
+                      <div class=" products__ingridients-text">CОСТАВ</div>
+                    </div>
+                    <div class="dropdown__menu">
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#grape"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Виноград</div>
+                          <div class="dropdown__item-weight">25г</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#nut"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Грецкий орех</div>
+                          <div class="dropdown__item-weight">32г</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#almond"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Кунжутное семя</div>
+                          <div class="dropdown__item-weight">20г</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#milk"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Сухое молоко</div>
+                          <div class="dropdown__item-weight">10г</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#sugar"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Зам.сахара</div>
+                          <div class="dropdown__item-weight">4г</div>
+                        </li>
+                        <li class="dropdown__item">
+                          <div class="dropdoown__item-elem">
+                            <svg class="dropdown__item-logo">
+                              <use xlink:href="./img/SPRITE.svg#beans"></use>
+                            </svg>
+                          </div>
+                          <div class="dropdown__item-text">Какако бобы</div>
+                          <div class="dropdown__item-weight">4г</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="products__title">Батончик “Морские водоросли”</div>
+                  <div class="products__title-desc">Гранола из винограда, грецкого ореха и кунжутных семечек.
+                    В состав также входят: сухое молоко, заменитель сахара и какао бобы.</div>
+                  <div class="products__desc">
+                    <div class="products__desc-col">
+                      <div class="products__desc-text">
+                        <h3>Калорийность</h3>
+                        <div class="products__desc-elem">120 ккал</div>
+                      </div>
+                      <div class="products__desc-text">
+                        <h3>Вес</h3>
+                        <div class="products__desc-elem">98 грамм</div>
+                      </div>
+                    </div>
+                    <div class="products__desc-col">
+                      <div class="products__desc-value">140 ₽</div>
+                      <div class="btn btn--theme--green">Заказать</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
           </ul>
         </div>
       </section>
@@ -457,40 +557,41 @@
       <section class="section order-section section--font-color--green">
         <div class="container">
           <h2 class="section__title">Закажите доставку</h2>
-          <form class="form">
+          <form class="form" autocomplete="off">
+            <input type="hidden" name="to" value="somewhere@mail.ru">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form_title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form_title">Телефон</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form_title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="street" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form_title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="home" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form_title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="part" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form_title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="appartment" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form_title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" name="floor" class="form__input">
                 </label>
               </div>
 
@@ -499,7 +600,7 @@
               <div class="form__row">
                 <label class="form__block form__block--comment">
                   <div class="form_title">Комментарий</div>
-                  <textarea class="form__input form__input--textarea">
+                  <textarea class="form__input form__input--textarea" name="comment">
                   </textarea>
                 </label>
               </div>
@@ -591,7 +692,6 @@
       <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-
     </ul>
   </nav>
 
@@ -611,11 +711,23 @@
       </ul>
     </nav>
   </div>
+
+  <div id="modal" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Сообщение отправлено
+      </div>
+      <div class="modal__button-container">
+        <a href="#" class="btn app-submit-btn btn--theme--green">Закрыть</a>
+      </div>
+    </div>
+  </div>
+
   <script src="  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <!-- jquery подключить первым -->
   <script src="fulscreen-menu.js"></script>
-  <script src=""></script>
-  <!-- <script src="jquery.js"></script> -->
 </body>
 
 </html>
