@@ -24,6 +24,8 @@ $('.form').submit((e) => {                      //на форму навесим
   const modal = $('#modal');
   const content = modal.find('.modal__content');
 
+  modal.removeClass('error-modal');
+
   const isValid = validateFields(form, [name, phone, comment, to]);
 
   if (isValid) {                   //если кол-во таких запросов = 0, то производим от-ку зап-са
@@ -36,7 +38,7 @@ $('.form').submit((e) => {                      //на форму навесим
         comment: comment.val(),
         to: to.val(),
       },                               //данные которые передаем с запросом
-      success: (data) => {
+      success: data => {
         content.text(data.message)
         // console.log(data);
         $.fancybox.open({                            //обращаемся в фэнсибокс
@@ -44,6 +46,16 @@ $('.form').submit((e) => {                      //на форму навесим
           type: 'inline',                            //передаем настройки,тип
         });
       },
+      error: data => {
+        const message = data.responseJSON.message;
+        content.text(message);
+        modal.addClass('error-modal');
+
+        $.fancybox.open({                            //обращаемся в фэнсибокс
+          src: '#modal',                             //куда передаем
+          type: 'inline',                            //передаем настройки,тип
+        });
+      }
     });
   }
 });

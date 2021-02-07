@@ -1537,3 +1537,7 @@ img {
   margin-bottom: 15px;
   columns: #000;
 }
+
+.error-modal {
+  color: red;
+}
