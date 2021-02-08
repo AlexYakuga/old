@@ -1,4 +1,18 @@
-//модалка и валидация
+const validateFields = (form, fieldsArray) => {  // создадим функцию, в которую передадим форму  список полей для валдиации
+
+  fieldsArray.forEach((field) => {         //если значение инпута будет пусты
+    field.removeClass('input-error');      //перед тем как проверить, удалим класс, чтобы не было бордера после отправки
+    if (field.val().trim() == "") {        //trim обрезает пробелы
+      field.addClass('input-error');       //то добавим класс, который будет выдавать ошибку
+    }
+  });
+
+  const errorFields = form.find('.input-error');          //проверим, что в форме ошибок при отправке нет
+
+  return errorFields.length == 0;
+}
+
+
 
 $('.form').submit((e) => {                      //на форму навесим событие submit
   e.preventDefault();
@@ -12,54 +26,49 @@ $('.form').submit((e) => {                      //на форму навесим
   const modal = $('#modal');
   const content = modal.find('.modal__content');
 
-  modal.removeClass('error-modal');
+  const isValid = validateFields(form, [name, phone, comment, to]);
 
-  [name, phone, comment, to].forEach(field => {      //если значение инпута будет пустым
-    field.removeClass('input-error');             // перед тем как проверить, удалим класс, чтобы не было бордера после отправки
-    if (field.val().trim() == "") {               //trim обрезает пробелы
-      field.addClass('input-error');              // то добавим класс, который будет выдавать ошибку
-    }
-  });
-
-  const errorFields = form.find('.input-error');    //проверим, что в форме ошибок при отправке нет
-
-  if (errorFields.length == 0) {                   //если кол-во таких запросов = 0, то производим отп-ку зап-са
-    $.ajax({
+  if (isValid) {                   //если кол-во таких запросов = 0, то производим от-ку зап-са
+    const request = $.ajax({
       url: 'https://webdev-api.loftschool.com/sendmail', //куда отправляем запрос
       method: 'post',
       data: {
-        name: name.val(),               //метод vval возьмет значение инпута, а инпут пишем сами
+        name: name.val(),               //метод val возьмет значение инпута, а инпут пишем сами
         phone: phone.val(),
         comment: comment.val(),
         to: to.val(),
       },                               //данные которые передаем с запросом
-
-      success: data => {
-        content.text(data.message)
-        // console.log(data);
-        $.fancybox.open({                            //обращаемся в фэнсибокс
-          src: '#modal',                             //куда передаем
-          type: 'inline',                            //передаем настройки,тип
-        });
-      },
-      error: data => {
-        const message = data.responseJSON.message;
-        content.text(message)
-        modal.addClass('error-modal');
-
-        $.fancybox.open({                            //обращаемся в фэнсибокс
-          src: '#modal',                             //куда передаем
-          type: 'inline',                            //передаем настройки,тип
-        });
-      }
     });
+
+    request.done(data => {
+      content.text(data.message);                   // от JSON ответ
+      name.val('');
+      phone.val('');
+      comment.val('');
+      to.val('');
+      // form.reset();
+    });
+
+    request.fail(data => {
+      const message = data.responseJSON.message;   // от JSON ответ
+      content.text(message);                       // методомо текст вставляем ответ от json
+      modal.addClass('error-modal');
+    })
+
+    request.always(() => {
+      $.fancybox.open({                            //обращаемся в фэнсибокс
+        src: '#modal',                             //куда передаем
+        type: 'inline',                            //передаем настройки,тип
+      });
+    })
   }
 });
 
 $('.app-submit-btn').click((e) => {              //закрываем после отправки формы
   e.preventDefault();
+
   $.fancybox.close();
-})
+});
 
 
 

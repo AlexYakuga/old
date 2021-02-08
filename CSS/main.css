@@ -1522,13 +1522,12 @@ img {
 .modal {
   display: none;
 }
-.modal.error-modal .modal__content {
-  color: red;
-}
-.modal.fancybox-content {
+
+.fancybox-content {
   padding: 0 !important;
 }
-.modal .fancybox-button {
+
+.fancybox-button {
   display: none;
 }
 

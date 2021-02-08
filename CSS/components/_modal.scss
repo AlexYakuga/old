@@ -1,20 +1,15 @@
 .modal {
   display: none;
-
-  &.error-modal {
-    .modal__content {
-      color: red;
-    }
-  }
-
-  &.fancybox-content {
-    padding: 0 !important;
-  }
-
-  .fancybox-button {
-    display: none;
-  }
 }
+
+.fancybox-content {
+  padding: 0 !important;
+}
+
+.fancybox-button {
+  display: none;
+}
+
 
 .modal__container {
   background: #fff;
@@ -27,8 +22,6 @@
 .modal__content {
   margin-bottom: 15px;
   columns: #000;
-  // width: rem(309px);
-  // height: rem(176px);
 }
 
 .error-modal {
