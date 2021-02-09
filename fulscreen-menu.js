@@ -12,8 +12,6 @@ const validateFields = (form, fieldsArray) => {  // создадим функц�
   return errorFields.length == 0;
 }
 
-
-
 $('.form').submit((e) => {                      //на форму навесим событие submit
   e.preventDefault();
 

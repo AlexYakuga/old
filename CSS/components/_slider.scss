@@ -1,0 +1,37 @@
+.slider {
+  height: 100vh;
+  position: relative;
+  background: url(../img/slider/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    height: 100%;
+  }
+
+  &__trigger {
+    height: 100%;
+    width: 100%;
+
+    // &--1 {
+    //   background;
+    // }
+
+  }
+
+  &__content-wrap {
+    width: 0;
+    overflow: hidden;
+    transform: 0;
+  }
+
+}

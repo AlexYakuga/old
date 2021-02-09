@@ -24,6 +24,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0;
+    padding-top: 30px;
   }
 }
 
@@ -141,6 +143,12 @@
     justify-content: center;
   }
 
+  &-img {
+    @include phones {
+      display: flex;
+      max-height: 255px;
+    }
+  }
 }
 
 .products__desc-col {
