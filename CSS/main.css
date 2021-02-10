@@ -1578,6 +1578,7 @@ img {
   height: 100%;
   width: 100px;
   position: relative;
+  display: flex;
 }
 .slider__trigger--1 {
   background: url(../img/slider/tg1.png) no-repeat;
@@ -1627,4 +1628,23 @@ img {
   .slider__content {
     padding: 20px;
   }
+}
+.slider__content-text {
+  color: #FFFFFF;
+  transform: rotate(-90deg);
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  white-space: nowrap;
+  display: flex;
+  height: 100px;
+}
+.slider .slider__title {
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
 }
