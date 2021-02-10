@@ -1603,6 +1603,11 @@ img {
   top: 0;
   left: 0;
 }
+@media screen and (max-width: 480px) {
+  .slider__trigger {
+    width: 50px;
+  }
+}
 .slider__content-wrap {
   width: 0;
   overflow: hidden;
@@ -1617,4 +1622,9 @@ img {
   color: #FFFFFF;
   height: 100%;
   padding: 30px 80px 30px 38px;
+}
+@media screen and (max-width: 480px) {
+  .slider__content {
+    padding: 20px;
+  }
 }

@@ -50,6 +50,11 @@
       top: 0;
       left: 0;
     }
+
+    @include phones {
+      width: 50px;
+    }
+
   }
 
   &__content-wrap {
@@ -66,6 +71,10 @@
     color: #FFFFFF;
     height: 100%;
     padding: 30px 80px 30px 38px;
+
+    @include phones {
+      padding: 20px;
+    }
   }
 
 }
