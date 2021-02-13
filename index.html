@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="./CSS/main.css">
   <title>CHOCCO</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script defer src="video.js"></script>
+  <!--параметр defer для загрузки dom сразу -->
 </head>
 
 <body>
@@ -594,6 +596,33 @@
           </ul>
         </div>
       </section>
+
+      <section class="section video">
+        <div class="container video__container">
+          <h2 class="section__title">Как мы работаем</h2>
+          <div class="video__player">
+            <video id="player" poster="./img/player/splash.png">
+              <source src="./img/video.mp4" type="video/mp4">
+            </video>
+            <img src="./img/player/play.png" alt="" class="play video__player-img">
+          </div>
+
+          <div class="video__toolbar">
+            <div class="duration">
+              <img src="./img/player/playblack.png" alt="" class="play duration__img">
+              <input type="range" class="duration__length" id="durationLevel">
+            </div>
+            <div class="sound">
+              <img src="./img/player/sound.png" alt="" class="sound__mic" id="mic">
+              <div class="sound__volume">
+                <input type="range" class="duration__length duration__length--other" id="micLevel">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <section class="section order-section section--font-color--green">
         <div class="container">
           <h2 class="section__title">Закажите доставку</h2>
@@ -672,8 +701,8 @@
         </div>
       </section>
       <section class="section">
-        <div class="section-map">
-          <img src="./img/footer/map.png" alt="" class="section-map__img">
+        <div class="section-map" id="section-map">
+          <!-- <img src="./img/footer/map.png" alt="" class="section-map__img"> -->
         </div>
         <footer class="footer">
           <div class="container footer__container">
@@ -769,6 +798,11 @@
   <!-- jquery подключить первым -->
   <script src="fulscreen-menu.js"></script>
   <script src="accord.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="map.js"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+
+
 </body>
 
 </html>
