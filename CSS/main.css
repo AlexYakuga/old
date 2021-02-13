@@ -1688,6 +1688,39 @@ img {
   justify-content: center;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .video__container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .video__container {
+    padding: 0 10px;
+  }
+}
+.video__container::after {
+  content: url(../img/player/leaf_1.png);
+  position: absolute;
+  left: 2%;
+  bottom: 15%;
+}
+@media screen and (max-width: 768px) {
+  .video__container::after {
+    left: -5%;
+    bottom: 15%;
+  }
+}
+.video__container::before {
+  content: url(../img/player/leaf_2.png);
+  position: absolute;
+  right: 15%;
+  top: 25%;
+}
+@media screen and (max-width: 768px) {
+  .video__container::before {
+    right: 3%;
+  }
+}
 
 .video__player {
   position: relative;
@@ -1701,6 +1734,9 @@ img {
   transform: translate(-50%, -50%);
   cursor: pointer;
   border: 0;
+}
+.video__player-img--hidden {
+  opacity: 0;
 }
 
 .video__toolbar {
