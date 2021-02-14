@@ -1,12 +1,12 @@
 html {
-  font-size: $baseFontSize;
+  font-size: $base;
 
   @include tablets {
-    font-size: $baseFontSize - 1px;
+    font-size: $base - 1px;
   }
 
   @include phones {
-    font-size: $baseFontSize - 2px;
+    font-size: $base - 2px;
   }
 }
 
@@ -18,19 +18,25 @@ html {
 body {
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   color: #fff;
-  font-size: $baseFontSize;
+  font-size: $base;
   line-height: 1.42;
   -webkit-osx-font-smooothing: antialiased;
   -moz-osx-font-smooothing: grayscale;
-  // position: relative;
   color: #292929;
 }
 
 .wrapper {
   position: relative;
-  min-height: 100%;
+  height: 100%; // для OPS
   overflow: hidden;
   width: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
+  // transform: translateY();
 }
 
 .container {

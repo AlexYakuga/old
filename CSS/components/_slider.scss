@@ -24,6 +24,10 @@
     width: 100px;
     position: relative;
     display: flex;
+    align-items: flex-end;
+    padding: 15px 20px;
+    text-decoration: none;
+
 
     &--1 {
       background: url(../img/slider/tg1.png) no-repeat;
@@ -86,6 +90,7 @@
       line-height: 58px;
       white-space: nowrap;
       display: flex;
+      transform-origin: top left;
     }
   }
 

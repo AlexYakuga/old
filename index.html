@@ -19,19 +19,19 @@
 
   <div class="wrapper">
     <div class="maincontnent">
-      <section class="hero">
+      <section data-sidemenu-theme="white" data-section-id="hero" class="hero">
         <div class="container hero__container">
           <header class="header">
             <img src="./img/hero/Лого.png" alt="logo" class="logo">
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link"></a>О нас</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Батончики</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Команда</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Меню</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Отзывы</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Как мы работаем</li>
-                <li class="menu__item"><a href="#" class="menu__link"></a>Контакты</li>
+                <li class="menu__item"><a href="#" data-scroll-to="benefits" class="menu__link"></a>О нас</li>
+                <li class="menu__item"><a href="#" data-scroll-to="hero" class="menu__link"></a>Батончики</li>
+                <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link"></a>Команда</li>
+                <li class="menu__item"><a href="#" data-scroll-to="slider" class="menu__link"></a>Меню</li>
+                <li class="menu__item"><a href="#" data-scroll-to="reviews" class="menu__link"></a>Отзывы</li>
+                <li class="menu__item"><a href="#" data-scroll-to="video" class="menu__link"></a>Как мы работаем</li>
+                <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link"></a>Контакты</li>
               </ul>
             </nav>
             <a href="tel:+78009039090" class="phone-number header__phone-number">
@@ -53,7 +53,7 @@
             <h1 class="hero__main-tittle">Натуральные шоколадные батончики</h1>
             <div class="hero__tittle-desc">Наши батончики идеально подходят для тех, кто следит за своим здоровьем
             </div>
-            <a href="#" class="btn btn--theme--white">Заказать</a>
+            <a href="#" data-scroll-to="order" class="btn btn--theme--white">Заказать</a>
           </div>
           <div class="hero__icons-section">
             <ul class="features">
@@ -86,7 +86,7 @@
         </div>
       </section>
 
-      <section class="section benefits-section">
+      <section data-sidemenu-theme="black" data-section-id="benefits" class="section benefits-section">
         <div class="container">
           <div class="headline">
             <h2 h2 class="section__title headline__title">Почему chocco?</h2>
@@ -142,7 +142,7 @@
         </div>
       </section>
 
-      <section class="section products-section">
+      <section data-sidemenu-theme="black" data-section-id="products" class="section products-section">
         <div class="container products-section__container">
 
           <div class="products-slider">
@@ -356,7 +356,7 @@
         </div>
       </section>
 
-      <section class="section team-section">
+      <section data-sidemenu-theme="black" data-section-id="team" class="section team-section">
         <div class="container">
           <div class="section__title section__title-mobile">команда</div>
           <ul class="team team--version--desktop">
@@ -477,7 +477,7 @@
         </div>
       </section>
 
-      <section class="slider">
+      <section data-sidemenu-theme="black" data-section-id="slider" class="slider">
         <div class="slider__title">Меню</div>
         <ul class="slider__list">
           <li class="slider__item">
@@ -494,7 +494,9 @@
             </div>
           </li>
           <li class="slider__item">
-            <a href="" class="slider__trigger slider__trigger--2" data-trigger></a>
+            <a href="" class="slider__trigger slider__trigger--2" data-trigger>
+              <span class="slider__content-text">Батончики с молоком</span>
+            </a>
             <div class="slider__content-wrap" data-open>
               <div class="slider__content">
                 <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
@@ -505,7 +507,9 @@
             </div>
           </li>
           <li class="slider__item">
-            <a href="" class="slider__trigger slider__trigger--3" data-trigger></a>
+            <a href="" class="slider__trigger slider__trigger--3" data-trigger>
+              <span class="slider__content-text">Дикие ягоды</span>
+            </a>
             <div class="slider__content-wrap" data-open>
               <div class="slider__content">
                 <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
@@ -519,7 +523,7 @@
 
       </section>
 
-      <section class="section reviews-section">
+      <section data-sidemenu-theme="white" data-section-id="reviews" class="section reviews-section">
         <div class="container">
           <h2 class="section__title section__title-reviews">Отзывы</h2>
           <div class="reviews__display">
@@ -597,7 +601,7 @@
         </div>
       </section>
 
-      <section class="section video">
+      <section data-sidemenu-theme="white" data-section-id="video" class="section video">
         <div class="container video__container">
           <h2 class="section__title">Как мы работаем</h2>
           <div class="video__player">
@@ -623,7 +627,8 @@
         </div>
       </section>
 
-      <section class="section order-section section--font-color--green">
+      <section data-sidemenu-theme="white" data-section-id="order"
+        class="section order-section section--font-color--green">
         <div class="container">
           <h2 class="section__title">Закажите доставку</h2>
           <form class="form" autocomplete="off">
@@ -700,7 +705,7 @@
           </form>
         </div>
       </section>
-      <section class="section">
+      <section data-sidemenu-theme="white" data-section-id="map" class="section">
         <div class="section-map" id="section-map">
           <!-- <img src="./img/footer/map.png" alt="" class="section-map__img"> -->
         </div>
@@ -749,7 +754,7 @@
       </section>
     </div>
   </div>
-  <nav class="fixed-menu">
+  <nav class="fixed-menu ">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--active"><a href="#" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
@@ -795,9 +800,12 @@
   <script src="  https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
   <!-- jquery подключить первым -->
   <script src="fulscreen-menu.js"></script>
   <script src="accord.js"></script>
+  <script src="ops.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="map.js"></script>
   <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
