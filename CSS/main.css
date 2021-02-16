@@ -923,8 +923,12 @@ img {
   }
 }
 
-.fixed-menu--shadowed {
-  color: black;
+.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
+  border-color: black;
+}
+
+.fixed-menu--shadowed .fixed-menu__link::before {
+  background: black;
 }
 
 .fixed-menu__item {

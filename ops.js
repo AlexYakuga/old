@@ -3,7 +3,7 @@ const display = $('.maincontent');
 const sidemenu = $('.fixed-menu');
 const menuItems = sidemenu.find('.fixed-menu__item');
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent)
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
@@ -29,12 +29,15 @@ const changeMenuTheemeForSection = sectionsEq => {
   if (menuTheme == 'black') {
     sidemenu.addClass(activeClass);
   } else {
-    sidemenu.removeClass('fixed-menu--shadowed');
+    sidemenu.removeClass(activeClass);
   }
 };
 
 const resetActiveClassForItem = (items, itemEq, activeClass) => {
-  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+  items.eq(itemEq)
+    .addClass(activeClass)
+    .siblings()
+    .removeClass(activeClass);
 }
 
 const performTransition = (sectionEq) => {
@@ -113,15 +116,16 @@ $(window).on('keydown', (e) => {
 
 $('wrapper').on('touchmove', e => e.preventDefult());
 
-$('[data-scroll-to]').click(e => {
-  e.preventDefult();
+$('[data-scroll-to]').on("click", (e) => {
+  e.preventDefault();
+  console.log(2222)
 
   const $this = $(e.currentTarget);
   const target = $this.attr('data-scroll-to');
   const reqSection = $(`[data-section-id=${target}]`);
 
   performTransition(reqSection.index());
-})
+});
 
 if (isMobile) {
   $("body").swipe({

@@ -1,0 +1,26 @@
+{
+  "name": "md",
+  "version": "1.0.0",
+  "description": "",
+  "main": "accord.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexYakuga/old.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexYakuga/old/issues"
+  },
+  "homepage": "https://github.com/AlexYakuga/old#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
+}
