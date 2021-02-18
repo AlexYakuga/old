@@ -17,7 +17,7 @@ const init = () => {
   const myCollection = new ymaps.GeoObjectCollection({}, {
     draggable: false,                // запрет на перетаскивание
     iconLayout: 'default#image',
-    iconImageHref: './img/mapstick.png',
+    iconImageHref: './img/map/mapstick.png',
     iconImageSize: [30, 42],
     iconImageOffset: [-3, -42]
   });
