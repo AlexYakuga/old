@@ -1,0 +1,80 @@
+.radio {
+  display: flex;
+  cursor: pointer; //для наведения
+  user-select: none; // чтобы браузер не видел чек как текст
+  margin-bottom: 5px;
+
+  &-pay-card {
+    @include phones {
+      margin-left: rem(-18px);
+    }
+  }
+
+  @include phones {
+    margin-bottom: rem(10px);
+    font-size: 1rem;
+  }
+
+
+  &--checkbox {
+    .radio__visible {
+      border-radius: 0;
+
+      &:before {
+        background: url(../img/order/Vector.png) center center no-repeat;
+      }
+    }
+
+    margin-bottom: rem(42px);
+    margin-right: rem(15px);
+
+    @include phones {
+      margin-right: 0;
+    }
+  }
+}
+
+.radio .radio__elem {
+  display: none;
+
+  &:checked~.radio__visible {
+
+    // если радиоелем в состояние чекд, то блок висибл (его элемент бифо) будет виден
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.radio__visible {
+  width: rem(25px);
+  height: rem(25px);
+  position: relative;
+  border-radius: 50%;
+  background: white;
+  margin-right: rem(10px);
+
+
+  &:before {
+    content: "";
+    width: rem(13px);
+    height: rem(13px);
+    background: #365A49;
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+}
+
+.radio__title {
+  margin-right: rem(37px);
+
+  @include phones {
+    margin-right: 28px;
+  }
+}

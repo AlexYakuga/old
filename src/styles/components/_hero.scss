@@ -1,0 +1,107 @@
+.hero {
+  background: url(../img/hero/blueleaf.png) right 0% bottom no-repeat;
+  background-color: $blue;
+  height: 100vh;
+  // height: 100%;
+  min-height: rem(652px);
+  color: #FFFFFF;
+  position: relative;
+
+  @include phones {
+    background-size: 80% 80%; //масштаб
+  }
+
+  @include tablets {
+    background-position: right bottom 88%; //поднять 
+  }
+
+  &::before,
+  &::after {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: url(../img/hero/leaf3.png);
+    position: absolute;
+    bottom: rem(-40px);
+    left: 2%;
+  }
+
+  &:after {
+    content: url(../img/hero/comp.png);
+    position: absolute;
+    bottom: rem(-50px);
+    right: 0;
+  }
+}
+
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: rem(24px) rem(8px) rem(50px);
+  background: url(../img/hero/Батончики.png) right center / 50% auto no-repeat;
+  /* для того чтоб картинка находилана текст*/
+
+  @include tablets {
+    background: none;
+  }
+
+}
+
+.hero__tittle-section {
+  width: 46%;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      width: rem(325px);
+      height: rem(338px);
+      background: url(../img/hero/comp768.png) center center / contain no-repeat;
+      margin-bottom: rem(15px);
+    }
+  }
+}
+
+.hero__icons-section {
+  @include tablets {
+    display: none;
+  }
+}
+
+.hero__main-tittle {
+  font-size: rem(48px);
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: rem(20px);
+  text-transform: uppercase;
+}
+
+.hero__tittle-desc {
+  font-size: rem(21px);
+  margin-bottom: rem(32px);
+  padding-right: 14%;
+
+  @include tablets {
+    padding: 0 25%;
+  }
+
+  @include phones {
+    padding: 0 7%;
+    margin-bottom: rem(2px);
+    margin-bottom: rem(2px);
+
+  }
+}

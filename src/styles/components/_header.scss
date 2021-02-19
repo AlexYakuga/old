@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  align-items: flex-start; // выравнивание по верху
+  justify-content: space-between;
+}
+
+.phone-number.header__phone-number {
+  @include tablets {
+    display: none;
+  }
+}
+
+// изза порядка подключения стилей, важнее .phone-number поэтому используем оба селектора
+
+.menu {
+  @include tablets {
+    display: none;
+  }
+
+  margin: 0 30px;
+  padding-top: 5px;
+}
+
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; // перевод в две строки
+  justify-content: center; //gh
+
+
+}
+
+.menu__link {
+  text-decoration: none;
+  white-space: nowrap; /// элементы не будут переноситься
+}
+
+.menu__item {
+  margin-right: rem(30px);
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--vertical {
+    margin-bottom: 10px;
+  }
+}
+
+.phone-number {
+  font-size: rem(22px);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon-elem {
+  height: rem(14px);
+  width: rem(14px);
+  margin-right: rem(6px);
+}
+
+.phone-number__text {
+  white-space: nowrap; ///// элементы не будут переноситься
+  color: #FFFFFF;
+}
+
+.phone-number__icon {
+  flex-shrink: 0; // иконка не будет сжиматься
+}

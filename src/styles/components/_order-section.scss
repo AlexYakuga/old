@@ -1,0 +1,36 @@
+.order-section {
+  position: relative;
+  background: url(../img/order/back.png);
+  height: 100vh;
+
+  &:before {
+    content: url(../img/order/berry.png);
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+
+    &:after {
+      content: url(../img/order/leaf.png);
+      position: absolute;
+      bottom: 7%;
+      right: 1%;
+
+      @include phones {
+        display: none;
+      }
+
+      @include tablets {
+        display: none;
+      }
+
+    }
+  }
+}

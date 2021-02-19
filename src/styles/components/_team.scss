@@ -1,0 +1,147 @@
+.team-section {
+  &::after {
+    content: url(../img/team/leaf.png);
+    position: absolute;
+    top: rem(-200px);
+    right: 0;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: url(../img/team/blueberry.png);
+    position: absolute;
+    top: rem(-20px);
+    right: 0;
+    z-index: 2;
+
+    @include tablets {
+      display: none;
+    }
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+}
+
+.team--version--desktop {
+  // position: relative;
+
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+
+.team--version--mobile {
+  display: none;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team--version--desktop .team__content {
+  position: absolute;
+  top: 100%;
+}
+
+.team__item {
+  max-width: 220px;
+  flex: 1; //занимать равную ширину
+  margin-right: 20px;
+  text-align: center;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.team__member {
+  margin-bottom: 21px;
+}
+
+.team__title {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 8px;
+  outline: none;
+
+  &::after {
+    content: url(../img/team/str.png);
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 9px;
+    height: 26px;
+  }
+}
+
+.team__item.active .team__title {
+  &::after {
+    transform: rotate(180deg);
+  }
+
+}
+
+.team__content {
+  overflow: hidden;
+  height: 0;
+  transition: height .5s;
+}
+
+.team__content-text {
+  margin-bottom: 4px;
+  color: #292929;
+}
+
+.team__content-desc {
+  color: #666666;
+}
+
+.team--version--mobile {
+  @include tablets {
+    display: flex;
+  }
+
+  @include phones {
+    display: flex;
+  }
+}
