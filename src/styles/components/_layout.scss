@@ -1,14 +1,14 @@
-html {
-  font-size: $base;
+// html {
+//   font-size: $base;
 
-  @include tablets {
-    font-size: $base - 1px;
-  }
+//   @include tablets {
+//     font-size: $base - 1px;
+//   }
 
-  @include phones {
-    font-size: $base - 2px;
-  }
-}
+//   @include phones {
+//     font-size: $base - 2px;
+//   }
+// }
 
 body,
 html {

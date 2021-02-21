@@ -6,13 +6,14 @@ const playButtonVideo = document.querySelector(".video__player-img");
 
 
 
-let intervalId;  // обновление интеравла
+let intervalId; // обновление интеравла
 let soundLevel;
 const MAX_SOUND_VALUE = 10;
 const NORMAL_UPDATE_RANGE = 1000 / 66; //ЧАСТОТА обновления для полосы прокрутки для плавного продвежения(допустим) 
 
 
-document.addEventListener('DOMContentLoaded', function () { //функция для запуска всего фукционала 
+document.addEventListener('DOMContentLoaded', function () {
+  //функция для запуска всего фукционала 
 
   video.addEventListener('canplaythrough', () => {
     durationControl.max = video.duration;
@@ -29,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function () { //функция д�
 
 function initPlayButton() {
   const playButtons = document.querySelectorAll('.play'); //на кнопки play вешаем обработчик событий
+
   playButtons.forEach(button => {
     button.addEventListener('click', playStop) //запускает плэйстоп по клику
   })
-
   const micControl = document.querySelector('#mic');
   micControl.addEventListener('click', soundOf) // по клику вызов функции soundof
 }
@@ -51,10 +52,13 @@ function playStop() {
 
   // durationControl.max = video.duration; // укажем максимальную границу, длинну видео
 
-  if (video.paused) {  //если видео на паузе - включаем и наборот
+  if (video.paused) {
+    //если видео на паузе - включаем и наборот
     intervalId = setInterval(updateDuration, NORMAL_UPDATE_RANGE) // (обновление интервала(ползунка)), через каждые 1000/60
     video.play();
-  } else {
+  }
+
+  else {
     stopInterval() // очищает интервал!!!
   }
 }
@@ -79,13 +83,17 @@ function stopInterval() {
   clearInterval(intervalId) // очищает интервал!!!
 }
 
-function soundOf() { // надо учесть, что громкость от 0 до 1
+function soundOf() {
+
+  // надо учесть, что громкость от 0 до 1
   if (video.volume == 0) {
     console.log('video.volume');
     console.log('включаем звук');
     video.volume = soundLevel; //снова выключаем
     soundControl.value = soundLevel * MAX_SOUND_VALUE;
-  } else {
+  }
+
+  else {
     // console.log('video.volume');
     console.log('вЫключаем звук');
     soundLevel = video.volume; // сохраянет значение на момент нажатия кнопки

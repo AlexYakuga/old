@@ -1,89 +1,129 @@
-// .player-section {
-//   &::after {
-//     content: '';
-//     background: url(../img/player/leaf_1.png) no-repeat;
-//     position: absolute;
-//     left: -10%;
-//     bottom: -10%;
-//     width: 6.5rem;
-//     height: 7.125rem;
-//   }
-
-//   &::before {
-//     content: '';
-//     background: url(../img/player/leaf_2.png) no-repeat;
-//     position: absolute;
-//     right: 10%;
-//     top: 10%;
-//     width: 5.625rem;
-//     height: 4.8125rem;
-//   }
-// }
-
-.player-section__container {
+.video__container {
   max-width: 660px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tablets {
+    padding: 0 20px;
+  }
+
+  @include phones {
+    padding: 0 10px;
+  }
+
+
+  &::after {
+    content: url(../img/player/leaf_1.png);
+    // background: url(../img/player/leaf_1.png) no-repeat;
+    position: absolute;
+    left: 2%;
+    bottom: 15%;
+    // width: 6.5rem;
+    // height: 7.125rem;
+
+    @include tablets {
+      left: -5%;
+      bottom: 15%;
+    }
+
+  }
+
+  &::before {
+    content: url(../img/player/leaf_2.png);
+    // background: url(../img/player/leaf_2.png) no-repeat;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+    // width: 5.625rem;
+    // height: 4.8125rem;
+
+    @include tablets {
+      right: 3%;
+    }
+  }
 }
 
-.player {
+.video__player {
   position: relative;
-  display: block;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
 
-  // &__start {
-  //   width: 12px;
-  //   height: 16px;
-  //   cursor: pointer;
+  &-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 0;
 
-  //   &-icon {
-  //     max-height: 100%;
-  //     max-width: 100%;
-  //   }
-  // }
-
-  // &__playback-button {
-  //   width: 12px;
-  //   height: 14px;
-  //   cursor: pointer;
-
-  //   &-icon {
-  //     max-height: 100%;
-  //     max-width: 100%;
-  //   }
-  // }
-
-  // &.active .player__splash {
-  //   display: none;
-  // }
-
-  // &.paused {
-  //   width: 14px;
-  //   height: 22px;
-  //   border: none;
-  // }
-
+    &--hidden {
+      opacity: 0;
+    }
+  }
 }
 
-.player__splash {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../img/player/splash.png) center center/cover no-repeat;
-  cursor: pointer;
-}
-
-.player__controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.video__toolbar {
   height: 35px;
-  background: #404040;
+  background-color: #404040;
+  display: flex;
+  margin-top: -2px;
+}
+
+.duration {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
+  flex: 1;
+
+  &__img {
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+
+  &__length {
+    width: 100%;
+    height: 4px;
+    border-radius: 1px;
+    background-color: #626262;
+    --webkit-appearance: none; //default css styles for safari
+    appearance: none; //по умолчанию элемент скрыт
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      //для стилизации ползунка (для других браузеров ищем и пишем подругому)
+      -webkit-appearance: none;
+      appearance: none;
+      background: #626262;
+      cursor: pointer;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+  }
+
+  &__length--other {
+    width: 58px;
+    height: 4px;
+  }
+}
+
+.sound {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+
+  &__volume {
+    margin-left: 10px;
+    margin-top: -5px;
+  }
+}
+
+
+#player {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

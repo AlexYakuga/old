@@ -17,15 +17,12 @@
   }
 }
 
-
 .footer__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: rem(15px) 0;
   height: rem(86px);
-
-
 
   @include phones {
     flex-direction: column;
@@ -64,11 +61,6 @@
 .social-icon {
   width: 20px;
   height: 20px;
-
-  // &--vk {
-  //   height: rem(14px);
-  // }
-
 }
 
 .social-icon--vk {
@@ -105,11 +97,6 @@
   }
 }
 
-
-
-
-
-
 .contacts__place {
   font-size: 21px;
 }
@@ -131,7 +118,6 @@
     fill: #f5f3ef;
     margin-right: rem(7px);
   }
-
 }
 
 .phone-number {

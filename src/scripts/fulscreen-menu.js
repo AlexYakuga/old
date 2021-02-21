@@ -1,36 +1,5 @@
-// // API, подключение видео
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player("yt-player", {
-//     height: "405",
-//     width: "660",
-//     videoId: "LXb3EKWsInQ",
-//     events: {
-//       // onReady: onPlayerReady,
-//       // onStateChange: onPlayerStateChange
-//     },
-//     playerVars: {
-//       controls: 0,
-//       disablekb: 1,
-//       showinfo: 0,
-//       rel: 0,
-//       autoplay: 0,
-//       modestbranding: 0
-//     }
-//   });
-// }
 
-
-
-
-
-
-
-
-
-
-
-
-
+// fulscreenmenu
 const validateFields = (form, fieldsArray) => {  // создадим функцию, в которую передадим форму  список полей для валдиации
 
   fieldsArray.forEach((field) => {         //если значение инпута будет пусты
@@ -156,23 +125,6 @@ $('.team__title').click(e => {
   // openItem($this);                         // вызываем функция открытия и передаем текущий элемент при нажатии
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //отзывы
 const findBlocksByAlias = alias => {
   return $('.reviews__item').filter((ndx, item) => {
@@ -212,3 +164,4 @@ const clickFn = (e) => {
 
 button.addEventListener('click', clickFn)
 close.addEventListener('click', clickFn)
+
